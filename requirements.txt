@@ -33,10 +33,11 @@ jamo==0.4.1
 multidict==6.0.4
 requests==2.31.0
 
-# Torch (TTS dependency + DeepSeek requirement)
-torch>=2.1.0
-torchaudio>=2.1.0
-torchvision>=0.16.0
+# Torch (GPU, CUDA 11.8)
+--index-url https://download.pytorch.org/whl/cu118
+torch==2.1.0+cu118
+torchaudio==2.1.0+cu118
+torchvision==0.16.0+cu118
 
 # DeepSeek and Language Model Dependencies
 transformers>=4.35.0

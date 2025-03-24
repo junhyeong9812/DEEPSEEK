@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeepSeek AI 에이전트</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    {% include 'components/header.html' %}
+
+    <main class="container">
+      <section class="hero">
+        <h1>DeepSeek AI 에이전트</h1>
+        <p>코드 개발, 오디오 처리, 대화형 AI 기능을 갖춘 지능형 에이전트</p>
+        <a href="/chat" class="btn">채팅 시작하기</a>
+      </section>
+
+      <section class="features">
+        <div class="feature-card">
+          <h2>코드 개발</h2>
+          <p>코드 작성, 최적화, 리팩토링, 설명 기능을 제공합니다.</p>
+        </div>
+
+        <div class="feature-card">
+          <h2>음성 처리</h2>
+          <p>STT(음성-텍스트)와 TTS(텍스트-음성) 기능을 통합했습니다.</p>
+        </div>
+
+        <div class="feature-card">
+          <h2>지능형 대화</h2>
+          <p>맥락을 이해하는 대화 기능으로 자연스러운 상호작용이 가능합니다.</p>
+        </div>
+      </section>
+    </main>
+
+    {% include 'components/footer.html' %}
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>

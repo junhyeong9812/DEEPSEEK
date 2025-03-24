@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeepSeek 채팅 - AI 에이전트</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css"
+    />
+  </head>
+  <body>
+    {% include 'components/header.html' %}
+
+    <main class="container">
+      <div class="chat-interface">
+        <div class="tabs">
+          <button class="tab active" data-tab="chat">대화 모드</button>
+          <button class="tab" data-tab="code">코드 향상</button>
+        </div>
+
+        <div class="tab-content" id="chat-tab">
+          {% include 'components/chat_box.html' %}
+        </div>
+
+        <div class="tab-content hidden" id="code-tab">
+          <div class="code-enhance">
+            <div class="form-group">
+              <label for="enhance-task">작업 선택:</label>
+              <select id="enhance-task" class="form-control">
+                <option value="optimize">코드 최적화</option>
+                <option value="refactor">코드 리팩토링</option>
+                <option value="explain">코드 설명</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="code-input">코드 입력:</label>
+              <textarea
+                id="code-input"
+                class="form-control code-area"
+                placeholder="코드를 여기에 붙여넣으세요..."
+              ></textarea>
+            </div>
+
+            <button id="enhance-btn" class="btn">코드 향상</button>
+
+            <div class="result-container">
+              <h3>결과:</h3>
+              <div id="enhance-result" class="result-box">
+                <p class="placeholder">코드 향상 결과가 여기에 표시됩니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {% include 'components/footer.html' %}
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
