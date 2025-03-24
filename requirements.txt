@@ -1,0 +1,60 @@
+# Web Framework
+flask==2.2.5
+Werkzeug==2.2.3
+Jinja2==3.1.3
+itsdangerous==2.1.2
+click==8.1.7
+
+# OpenAI API
+openai==1.3.0
+python-dotenv==1.0.0
+
+# Audio Processing
+openai-whisper==20230918
+pydub==0.25.1
+soundfile==0.12.1
+
+# Scientific Computing and Data Processing
+numpy==1.24.3
+scipy>=1.11.2
+pandas==1.5.3
+scikit-learn>=1.3.0
+
+# TTS and Dependencies
+TTS[all]==0.22.0
+Cython==0.29.36
+numba==0.57.1
+
+# Utilities
+pyyaml==6.0.1
+tqdm==4.66.1
+matplotlib==3.7.2
+jamo==0.4.1
+multidict==6.0.4
+requests==2.31.0
+
+# Torch (TTS dependency + DeepSeek requirement)
+torch>=2.1.0
+torchaudio>=2.1.0
+torchvision>=0.16.0
+
+# DeepSeek and Language Model Dependencies
+transformers>=4.35.0
+accelerate>=0.23.0
+sentencepiece>=0.1.99
+protobuf>=3.20.0
+
+# Fine-tuning and Training Tools
+datasets>=2.14.0  # Hugging Face datasets library
+evaluate>=0.4.0   # 평가 메트릭 라이브러리
+tensorboard>=2.14.0  # 학습 모니터링
+wandb>=0.15.0     # 실험 트래킹 (선택사항)
+bitsandbytes>=0.41.0  # 8비트 양자화 학습 (메모리 효율)
+deepspeed>=0.10.0  # 분산 학습 및 최적화 (대규모 모델용)
+peft>=0.5.0       # 파라미터 효율적 파인튜닝(LoRA 등)
+
+# WSGI Server
+gunicorn==21.2.0
+
+# WSGI Server (Windows)
+waitress==2.1.2
